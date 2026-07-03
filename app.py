@@ -16,7 +16,7 @@ plt.rcParams['font.sans-serif'] = 'DejaVu Sans'
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('Coffe_sales.csv')
+    df = pd.read_csv('coffe_sales.csv')
     
     df['Date'] = pd.to_datetime(df['Date'])
     df['Day_Type'] = np.where(df['Weekday'].isin(['Sat', 'Sun']), 'Weekend', 'Weekday')
